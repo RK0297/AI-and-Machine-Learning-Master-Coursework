@@ -45,3 +45,4 @@ Thumbs.db
 
 # Experiment tracking
 wandb/
+!12-Agentic-AI-and-LangGraph/resources/Chinook.db

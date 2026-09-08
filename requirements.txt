@@ -1,12 +1,28 @@
 # =============================================================================
-# Generative AI and RAG Coursework — Python Dependencies
+# Full-Stack AI, ML & Agentic Coursework - Python Dependencies
 # =============================================================================
 # Install all: pip install -r requirements.txt
-# Tested with Python 3.12
+# Tested with Python 3.10+ / 3.12
 # =============================================================================
 
-# ── Core ML & NLP ──────────────────────────────────────────────────────────────
+# --- Classical Machine Learning & Data Science ---
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+plotly
+joblib
+
+# --- Natural Language Processing ---
+nltk
+
+# --- Deep Learning Foundations ---
+tensorflow
 torch
+
+# --- Transformer Models & Tokenization ---
 transformers
 datasets
 tokenizers
@@ -14,12 +30,12 @@ sentence-transformers
 accelerate
 einops
 
-# ── LLM Fine-Tuning (LoRA / QLoRA / PEFT) ─────────────────────────────────────
+# --- LLM Fine-Tuning (LoRA / QLoRA / PEFT) ---
 peft
 trl
 bitsandbytes
 
-# ── LangChain Ecosystem ───────────────────────────────────────────────────────
+# --- LangChain & Agentic AI Orchestration ---
 langchain
 langchain-core
 langchain-community
@@ -32,26 +48,24 @@ langchain-experimental
 langchain-chroma
 langchain-neo4j
 langgraph
+langchain-mcp-adapters
+mcp
+tavily-python
 
-# ── Vector Databases ──────────────────────────────────────────────────────────
+# --- Vector Databases & Graph Stores ---
 chromadb
 neo4j
 
-# ── LLM APIs & Observability ──────────────────────────────────────────────────
+# --- LLM Observability & Evaluation ---
 openai
 langsmith
 wandb
 
-# ── Utilities ─────────────────────────────────────────────────────────────────
+# --- Utilities & Data Engineering ---
 python-dotenv
 tiktoken
 lark
 requests
 huggingface-hub
 pydantic
-
-# ── Visualization ─────────────────────────────────────────────────────────────
-yfiles-jupyter-graphs
-
-# ── Data Engineering (Module 05 — requires separate Java/Kafka setup) ─────────
 pyspark

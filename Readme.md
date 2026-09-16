@@ -64,18 +64,17 @@ Comprehensive coursework spanning Machine Learning, Deep Learning, Natural Langu
 
 ## 🤖 Module 12: Agentic AI & LangGraph Roadmap
 
-Module 12 integrates end-to-end agentic workflows:
+Module 12 integrates end-to-end agentic workflows powered by **Groq (`llama-3.3-70b-versatile`)**, **LangGraph**, and **Model Context Protocol (MCP)** with 14 visual architecture and lifecycle diagrams:
 
-1. **`01_llm_guardrails_middleware.ipynb`**: 5-layer input/output guardrails, PII masking, and deterministic short-circuiting.
-2. **`02_agent_tools_and_memory.ipynb`**: Custom `@tool` creation, Tavily web search integration, and thread-scoped conversation memory with `InMemorySaver`.
-3. **`03_mcp_agent_protocols.ipynb`**: Model Context Protocol (MCP) servers (local STDIO and remote) consumed via `MultiServerMCPClient`.
-4. **`04_multi_agent_coordinator.ipynb`**: Multi-agent orchestration with custom `AgentState` schema, 3 specialized subagents, SQL database queries, and MCP error retry interceptors.
-5. **`05_dynamic_hitl_agent.ipynb`**: Dynamic prompts and tool permissions based on authentication state, plus Human-in-the-Loop (HITL) approval, rejection, and edits via `Command(resume=...)`.
-6. **`06_langgraph_core_stategraph.ipynb`**: Low-level `StateGraph`, node definitions, and state transitions.
-7. **`07_langgraph_conditional_routing.ipynb`**: Conditional edges and dynamic query routers.
-8. **`08_langgraph_state_reducers.ipynb`**: Custom state schemas, message reducers, and state validation.
-9. **`09_langgraph_time_travel_and_state_edit.ipynb`**: Checkpoint inspection, state rewinding, editing state with `update_state`, and replaying execution branches.
-10. **`10_langgraph_research_assistant_workflow.ipynb`**: Production multi-step graph agent synthesizing research queries.
+1. **[`01_agent_tools_and_memory.ipynb`](./12-Agentic-AI-and-LangGraph/01_agent_tools_and_memory.ipynb)**: Custom `@tool` schemas, Tavily live web search integration, docstrings as LLM specifications, and thread-scoped conversational memory checkpoints via `InMemorySaver`.
+2. **[`02_mcp_agent_protocols.ipynb`](./12-Agentic-AI-and-LangGraph/02_mcp_agent_protocols.ipynb)**: Model Context Protocol (MCP) client-server architecture, local Python STDIO subprocess tool execution, remote MCP servers, and `MultiServerMCPClient`.
+3. **[`03_multi_agent_coordinator.ipynb`](./12-Agentic-AI-and-LangGraph/03_multi_agent_coordinator.ipynb)**: Hierarchical Multi-Agent orchestration with shared `WeddingState(AgentState)` schema, 3 specialized subagents (Travel, Venue, Playlist), Chinook SQLite DB, and MCP exponential backoff retry interceptors.
+4. **[`04_dynamic_hitl_agent.ipynb`](./12-Agentic-AI-and-LangGraph/04_dynamic_hitl_agent.ipynb)**: Dynamic system prompts (`@dynamic_prompt`), RBAC tool permissions based on authentication state (`@wrap_model_call`), and Human-in-the-Loop (HITL) email interrupt approval/rejection via `Command(resume=...)`.
+5. **[`05_langgraph_core_stategraph.ipynb`](./12-Agentic-AI-and-LangGraph/05_langgraph_core_stategraph.ipynb)**: Low-level `StateGraph` core primitives, `TypedDict` state channels, pure functional nodes, normal edges, conditional edge routing with `Literal`, and Pregel superstep execution.
+6. **[`06_langgraph_conditional_routing.ipynb`](./12-Agentic-AI-and-LangGraph/06_langgraph_conditional_routing.ipynb)**: The LLM Router Pattern, `MessagesState`, binding arithmetic tools to Groq Llama-3.3-70b, prebuilt `ToolNode`, and conditional branching via `tools_condition`.
+7. **[`07_langgraph_state_reducers.ipynb`](./12-Agentic-AI-and-LangGraph/07_langgraph_state_reducers.ipynb)**: State channels and update mechanics: default overwrite vs `Annotated[list, add]` reducers, parallel node write conflict resolution, custom reducers, and message deduplication/pruning with `add_messages` & `RemoveMessage`.
+8. **[`08_langgraph_time_travel_and_state_edit.ipynb`](./12-Agentic-AI-and-LangGraph/08_langgraph_time_travel_and_state_edit.ipynb)**: Checkpointing timeline inspection (`get_state_history`), state rewinding, in-place state mutation with `update_state()`, and replaying execution along forked timeline branches.
+9. **[`09_langgraph_research_assistant_workflow.ipynb`](./12-Agentic-AI-and-LangGraph/09_langgraph_research_assistant_workflow.ipynb)**: Production STORM-inspired multi-agent research workflow: Pydantic perspective generation, HITL reviewer approval, dynamic Map-Reduce parallelization via `Send` API, Tavily/Wikipedia retrieval, and section-by-section report synthesis.
 
 ---
 
